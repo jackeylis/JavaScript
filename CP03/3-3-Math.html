@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math对象</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			document.write(Math.PI + "<br>")
+			var r = 2;
+			document.write("圆的面积是："+(r*r*Math.PI)+"<br>");
+			document.write(Math.ceil(0.01)+"<br>");  //对数进行上舍入
+			document.write(Math.floor(1.999)+"<br>");  //对数进行下舍入
+			document.write(Math.round(1.5)+"<br>");  //返回与给出数值最接近的整数(四舍五入)
+			document.write(Math.max(1,2,3)+"<br>");  //返回最大值
+			document.write(Math.min(1,2,3)+"<br>");  //返回最小值
+			var randomNum1 = Math.random()*10;  //Math.random()返回介于0到1之间的伪随机数
+			document.write(randomNum1 + "<br>");
+			document.write(Math.round(randomNum1) + "<br>");
+			var randomNum2 = Math.random()*10;
+			document.write(parseInt(randomNum2) + "<br>");
+		</script>
+	</body>
+</html>

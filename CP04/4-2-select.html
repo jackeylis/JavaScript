@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下拉菜单</title>
+	</head>
+	<body>
+		<form name="myform" action="" method="post">
+			<select id="fruit" onchange="get()">
+				<option value="apple">苹果</option>
+				<option value="orange">橘子</option>
+				<option value="banana">香蕉</option>
+				<option value="peach">桃子</option>
+			</select>
+			<div id="show"></div>
+		</form>
+		
+		<script type="text/javascript">
+			function get(){
+				var len = document.getElementById("fruit").length;
+				var index = document.getElementById("fruit").selectedIndex;
+				var show = document.getElementById("show");
+				show.innerHTML ="下拉列表选项的数目是："+len+"<br>被选的选项的索引号是："+index;
+			}
+		</script>
+	</body>
+</html>

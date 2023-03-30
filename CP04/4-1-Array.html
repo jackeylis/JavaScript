@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组对象</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//数值对象的创建
+			//方法一：
+			var arr0 = new Array();  //创建一个不含有元素的数组
+			//方法二：
+			var fruit = ["apple","pear","banana","orange","peach"];
+			//方法三：
+			var fruit1 = new Array("apple","pear","banana","orange","peach");  //创建一个长度为5的数值，并赋值
+			//方法四：
+			var fruit2 = new Array(5);   //创建一个长度为5的数组，未赋值
+			fruit2[0] = "apple";
+			fruit2[1] = "pear";
+			fruit2[2] = "banana";
+			fruit2[3] = "orange";
+			fruit2[4] = "peach";
+			document.write(fruit2+"<br>");
+			//length属性：返回数组的长度（数组元素的数目）
+			//length始终大于最高数组索引（下标）
+			document.write("数组fruit2的长度（元素的个数）是: "+fruit2.length+"<br>");
+			//通过下标访问数组元素
+			document.write("数组fruit2的第一个元素是："+fruit2[0]+"<br>");
+			document.write("数组fruit2的最后一个元素值是："+fruit2[fruit2.length-1]+"<br>");
+			document.write("<br>数组元素的遍历：<br>");
+			//数组元素的遍历
+			for (var i = 0; i<fruit2.length;i++){
+				document.write("数组fruit2第"+(i+1)+"个元素"+"下标为"+i+"的元素值是"+fruit[i]+"<br>");
+			}
+			document.write("<br>");
+			//
+			for (var i in fruit2){    //for-in循环中，变量i如果不赋值，数据类型是string
+				document.write("数组fruit2第"+(parseInt(i)+1)+"个元素"+"下标为"+i+"的元素值是"+fruit[i]+"<br>");
+			}
+			
+			document.write("<br>数组的常用方法：<br>");
+			//数组的常用方法
+			//给数组添加一个元素
+			fruit2.push("lenmon");
+			document.write("数组fruit2的长度（元素的个数）是： "+fruit2.length+"<br>");
+			document.write(fruit2.join("+")+"<br>");
+		</script>
+	</body>
+</html>

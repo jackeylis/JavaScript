@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>省市级联</title>
+	</head>
+	<body>
+		<form name="myform">
+			现居住地：
+			<select id="selProvince" onchange="changeCity()">
+				<option>--请选择省份--</option>
+			</select>
+			<select id="selCity">
+				<option>--请选择城市--</option>
+			</select>
+		</form>
+
+		<script type="text/javascript">
+			var cityList = new Array();
+			cityList["广东省"] = ["广州市", "深圳市", "珠海市", "江门市","韶关市"];
+			//document.write(cityList["广东省"]);
+			//document.write(cityList["广东省"][0]);
+			cityList["江苏省"] = ["南京市", "苏州市", "无锡市","南通市","徐州市"];
+			cityList["浙江省"] = ["杭州市", "宁波市", "温州市","金华市","台州市"];
+			cityList["四川省"] = ["成都市", "自贡市", "攀枝花市", "绵阳市","乐山市"];
+			cityList["辽宁省"] = ["沈阳市", "大连市", "鞍山市", "营口市"];
+			cityList["山西省"] = ["太原市", "大同市", "阳泉市", "晋城市"];
+			cityList["北京市"] = ["东城区", "朝阳区", "丰台区", "大兴区"];
+			cityList["天津市"] = ["和平区", "津南区", "宝坻区", "北辰区"];
+			cityList["上海市"] = ["黄浦区", "长宁区", "浦东新区", "静安区"];
+			cityList["重庆市"] = ["万州区", "渝中区", "九龙坡区", "南岸区"];
+			function allProvince(){
+				var province=document.getElementById("selProvince");
+				for (var i in cityList) {
+					province.add(new Option(i,i),null);
+				}
+			}
+			window.onload = allProvince();
+			
+			function changeCity(){
+				var province = document.getElementById("selProvince").value;
+				var city = document.getElementById("selCity");
+				city.options.length = 0;   //清除当前city中的选项
+				for (var i in cityList) {
+					if (i==province) {
+						for (var j in cityList[i]) {
+							city.add(new Option(cityList[i][j],cityList[i][j]),null);
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

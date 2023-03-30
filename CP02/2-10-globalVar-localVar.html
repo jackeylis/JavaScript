@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全局变量与局部变量</title>
+	</head>
+	<body>
+		<input type="button" name="btnShow" value="显示变量值" onclick="show(prompt('请输入你要循环输出的次数',''))"/>
+		<script type="text/javascript">
+			var number1 = 5;   //全局变量
+			function shownum () {
+				var number2 = 66;  //局部变量
+				document.write(number1);
+				document.write(number2);
+			}
+			document.write(number1);
+			document.write(number2);
+		</script>
+		
+	</body>
+</html>

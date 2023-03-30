@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通过将层次关系查找节点</title>
+	</head>
+	<body>
+		<table id="myform" border="1" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<td>姓名</td>
+					<td>课程</td>
+					<td>成绩</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>欧阳兰</td>
+					<td>语文</td>
+					<td>88</td>
+				</tr>
+				<tr>
+					<td>白杨</td>
+					<td>数学</td>
+					<td>96</td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<input id="btn" type="button" value="第二行第一个单元格内容" onclick="show1()"/>
+		<br />
+		<input id="btn" type="button" value="第二行最后一个单元格内容" onclick="show2()"/>
+		<br />
+		<input id="btn" type="button" value="最后一行第一个单元格内容" onclick="show3()"/>
+		<br />
+		<input id="btn" type="button" value="最后一行最后一个单元格内容" onclick="show4()"/>
+		
+		<script type="text/javascript">
+			var objTable = document.getElementById("myform");
+			function show1(){
+				//第二行第一个单元格内容
+				var str1 = objTable.lastElementChild.firstElementChild.firstElementChild.innerHTML;
+				alert(str1);
+			}
+			function show2(){
+				//第二行最后一个单元格内容
+				var str2 = objTable.lastElementChild.firstElementChild.lastElementChild.innerHTML;
+				alert(str2);
+			}
+			function show3(){
+				//最后一行第一个单元格内容
+				var str3 = objTable.lastElementChild.lastElementChild.firstElementChild.innerHTML;
+				alert(str3);
+			}
+			function show4(){
+				//最后一行最后一个单元格内容
+				var str4 = objTable.lastElementChild.lastElementChild.lastElementChild.innerHTML;
+				alert(str4);
+			}
+		</script>
+	</body>
+</html>

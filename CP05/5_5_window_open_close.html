@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>5_5_window_open_close</title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<p><input id="btn1" type="button" value="打开窗口" onclick="openadv1()"/></p>
+			<p><input id="btn2" type="button" value="弹出固定大小的窗口" onclick="openadv2()"/></p>
+			<p><input id="btn3" type="button" value="打开窗口" onclick="openadv2()"/></p>
+			<p><input id="btn4" type="button" value="关闭窗口" onclick="openadv()"/></p>
+		</form>
+		<script type="text/javascript">
+			//打开窗口
+			function openadv1(){
+				window.open("5_5_open_detaile.html");
+			}
+			function openadv2(){
+				window.open("5_5_open_detaile.html","","height=300px,width=320px,toolbar=0,srollbars=0,location=0,status=0,menubar=0,resizable=0");
+			}
+			function openadv3(){
+				window.open("5_5_open_detaile.html","","fullscreen=yes");
+			}
+			function openadv(){
+				window.close();
+			}
+		</script>
+	</body>
+</html>

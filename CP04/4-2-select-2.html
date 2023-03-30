@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下拉菜单2.0</title>
+	</head>
+	<body>
+		<form name="myform">
+			<select id="selmenu" onchange="sel()">
+				<option>--请选择菜单--</option>
+				<option>早餐</option>
+				<option>午餐</option>
+				<option>晚餐</option>
+				<option>夜宵</option>
+			</select>
+			<select id="selfood">
+				<option>--请选择食物--</option>
+			</select>
+		</form>
+		<script type="text/javascript">
+			function sel(){
+				var menu = document.getElementById("selmenu").value;  //获取selmenu列表的值
+				var food = document.getElementById("selfood");
+				food.options.length =0;   //清除食物选项
+				switch (menu){
+					case "早餐":
+						food.add(new Option("鸡蛋","鸡蛋",null));
+						food.add(new Option("鲜肉包","鲜肉包",null));
+						food.add(new Option("豆浆","豆浆",null));
+						break;
+					case "午餐":
+						food.add(new Option("烧鸭饭","烧鸭饭",null));
+						food.add(new Option("螺蛳粉","螺蛳粉",null));
+						food.add(new Option("猪脚饭","猪脚饭",null));
+						break;
+					case "午餐":
+						food.add(new Option("煲仔饭","煲仔饭",null));
+						food.add(new Option("麻辣烫","麻辣烫",null));
+						food.add(new Option("白切鸡","白切鸡",null));
+						break;
+					case "夜宵":
+						food.add(new Option("小龙虾","小龙虾",null));
+						food.add(new Option("烧烤","烧烤",null));
+						food.add(new Option("炒粉","炒粉",null));
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

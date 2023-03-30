@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>indexOf方法</title>
+		<script type="text/javascript">
+			function check(){
+				var uname = document.myform.name.value;
+				if(uname.length==0){
+					alert("请输入用户名");
+					return false ;
+				}
+				var upwd = document.myform.pwd.value;
+				if(upwd.length<6){
+					alert("密码不能少于6位数");
+					return false;
+				}
+				var uemail = document.myform.email.value;
+				if(uemail.indexOf("@")==-1){
+					alert("邮箱地址必须包含@符号");
+					return false;
+				}
+				if(uemail.indexOf("@")>uemail.indexOf(".")){
+					alert("@符号必须在.前面!");
+					return false;
+				}
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myform" method="post" action="" onsubmit="return check()">
+			<table border="0" width="306" align="center">
+				<tr>
+					<td width="101">用户名：</td>
+					<td><input name="name" type="text"</td>
+				</tr>
+				<tr>
+					<td width="101">密码：</td>
+					<td><input type="password" name="pwd"</td>
+				</tr>
+				<tr>
+					<td width="101">邮箱：</td>
+					<td><input type="text" name="email"</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="提交">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

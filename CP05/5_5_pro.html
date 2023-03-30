@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>打开定制窗口</title>
+		
+	</head>
+	<body>
+		<!--课本P120 示例6-5-->
+		<form name="myform">
+			请定制你要显示的窗口：<br>窗口大小：
+			<input type="text" name="width0" size="5"/>宽度
+			<input type="text" name="height0" size="5"/>高度<br>是否需要：
+			<input type="checkbox" name="ck" value="0"/>菜单栏
+			<input type="checkbox" name="ck" value="1"/>工具栏
+			<input type="checkbox" name="ck" value="2"/>滚动条
+			<input type="checkbox" name="ck" value="3"/>状态栏<br />状态栏的文本：
+			<input type="text" name="message"/><br><br>
+			<input type="button" value="打开定制新窗口" onclick="fun()"/>
+			
+			<script type="text/javascript">
+				function fun(){
+					alert(1);
+					var w = document.myform.width0.value;
+					var h = document.myform.height0.value;
+					var menu = 0;
+					var tool = 0;
+					var sc = 0;
+					var st = 0;
+					var mes ="";
+					if(document.myform.ck[0].checked){
+						menu=1;
+					}
+					if(document.myform.ck[1].checked){
+						tool=1;
+					}
+					if(document.myform.ck[2].checked){
+						sc=1;
+					}
+					if(document.myform.ck[3].checked){
+						st=1;
+					}
+					mes = document.myform.message.value;
+					var con = "width"+w+",heigt="+h+",menuBar="+menu+",toolBar="+tool;
+					scrollBars=sc+",status="+st;
+					var newWin = window.open("5_5_pro_1.html","new",con);
+					newWin.status=mes;
+				}
+			</script>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>删除和替换节点</title>
+	</head>
+	<body>
+		<h2>喜欢的水果</h2>
+		<input id="btn1" type="button" value="删除图片" onclick="delNode()"/><br />
+		<img id="p1" src="../img/fruit.jpg" alt="图1"/><br />
+		<input id="btn2" type="button" value="替换图片" onclick="repNode()"/><br />
+		<img id="p2" src="../img/grape.jpg" alt="图2"/>
+		
+		<script type="text/javascript">
+			function delNode(){
+				var dNode = document.getElementById("p1");  //获取被删除的节点
+				document.body.removeChild(dNode);  //删除图片
+			}
+			function repNode(){
+				var oldimg = document.getElementById("p2");  //获取被替换的节点
+				var newimg = document.createElement("img");  //创建一个图片节点
+				newimg.setAttribute("src","../img/fruit.jpg");  //设置图片路径
+				document.body.replaceChild(newimg,oldimg);  //替换原来的图片
+			}
+		</script>
+	</body>
+</html>

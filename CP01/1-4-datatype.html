@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据类型转换</title>
+	</head>
+	<body>
+		<!--混合及计算文本框的和-->
+		1、混合计算时的数据类型：计算文本框的和<br />
+		<form>
+			<input type="text" name="text1"/> +
+			<input type="text" name="text2"/>
+			<input type="button" name="btn1" value="=" onclick="text3.value=parseFloat(document.forms[0].text1.value) + parseFloat(document.forms[0].text2.value)"/>
+			<input type="text" name="text3"/>
+		</form>
+		<script type="text/javascript">
+			var firstNum = 1;
+			//var secondNum = true;
+			var secondNum = null;
+			document.write(firstNum + "+"+secondNum +"="+(firstNum + secondNum))
+			document.write("<br>")
+			document.write("<br>2、自动类型转换：<br>")
+			var intnum =1;
+			var str = "hello";
+			var bool = true;
+			var nul = null;
+			document.write(intnum + "+"+str +"="+(intnum + str)+"整数+字符串结果是：" + typeof(intnum + str) + "<br>");
+		    document.write(intnum + "+"+bool +"="+(intnum + bool)+"整数+布尔型结果是：" + typeof(intnum + bool) + "<br>");
+			document.write(str + "+"+bool +"="+(str + bool)+"字符串+布尔型结果是：" + typeof(str + bool) + "<br>");
+			document.write(bool + "+"+nul +"="+(bool + nul)+"布尔型+空值结果是：" + typeof(bool + nul) + "<br>");
+			
+			document.write("<br>3、强制类型转换：<br>");
+			var str2 = "15.8";
+			document.write("字符串转整数的结果是："+praseInt(str2) + "<br>");
+			document.write("字符串转整数的结果是："+praseInt(str) + "<br>");
+			document.write("字符串转整数的结果是："+praseFloat(str2) + "<br>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>访问指定节点的方法</title>
+	</head>
+	<body>
+		<input id="btn1" type="button" value="按钮1"/><br />
+		<a name="aa" href="https://www.baidu.com/">百度</a><br />
+		<a name="aa" href="https://www.taobao.com/">淘宝</a><br />
+		<a name="aa" href="https://www.jd.com/">京东</a><br />
+		
+		<script type="text/javascript">
+			var btn = document.getElementById("btn1");  //根据元素的id属性获取一个元素节点对象
+			var objectA1 = document.getElementById("aa");  //根据元素的name属性获取元素节点对象(数组)
+			var objectA2 = document.getElementById("a");  //根据元素的标签名获取元素节点对象(数组)
+			console.log(btn);
+			console.log(objectA1);
+			console.log(objectA2);
+			
+			//查看节点属性  getAttribute("属性名")
+			console.log(btn.getAttribute("value"));
+			//问题1  查看a标签的“href”属性值
+			//for遍历数组
+			/* for (var i=0;i<objectA2.length;i++){
+				console.log(objectA2[i].getAttribute("href"));
+			} */
+			//for-in遍历数组
+			for (var i in objectA2){
+				console.log(objectA2[i].getAttribute("href"));
+			}
+			//修改节点属性 setAttribute("属性名"，"属性值")
+			//问题2  将按钮的文字修改为“按钮文字变了”
+			console.log(btn.setAttribute("value","按钮文字变了"));
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>运算符</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			document.write("赋值运算符“=”："+"<br>");
+			var str ="我是字符串";
+			var a =1;
+			document.write("变量str的值是："+str +"<br>");
+			document.write("变量的值是："+a +"<br>");
+			
+			document.write("<br>算数运算符：<br>");
+			document.write(5/2+"<br>");  //2.5
+			document.write(5%2+"<br>");  //1
+			
+			var number1 =10;
+			var number2 =20;
+			//number1++;  //11
+			//++number2;  //21
+			var number3 =number1++;  //先赋值再加1
+			var number4 =++number2;  //先加1再赋值
+			document.write("number1="+number1 +"<br>");
+			document.write("number2="+number2 +"<br>");
+			document.write("number3="+number3 +"<br>");  //10
+			document.write("number4="+number4 +"<br>");  //21
+			
+			document.write("<br>集合运算符：<br>");
+			var x=5;
+			var y=7;
+			x +=y;  //x=x+y
+			y -=x;  //y=y-x
+			document.write("x +=y："+x +"<br>");
+			document.write("y -=x："+y +"<br>");
+			
+			document.write("<br>比较运算符：<br>");
+			var num1=1;
+			var num2=2;
+			var num3='1';			
+			document.write((num1>num2)+"<br>");
+			document.write((num2==num1)+"<br>");
+			document.write((num1!=num2)+"<br>");
+			document.write((num1==num3)+"<br>");   //若类型不同，==尝试做自动转换，===不会
+			document.write((num1===num3)+"<br>");
+			document.write(("a">"b") +"<br>");  //ASCII字符代码表
+			document.write(("A">"b") +"<br>");
+			document.write(("bbbb">"b") +"<br>");
+			
+			document.write("<br>逻辑运算符：<br>");
+			document.write((true && true)+"<br>");
+			document.write((true && false)+"<br>");
+			document.write((false && false)+"<br>");
+			document.write((true || true)+"<br>");
+			document.write((true || false)+"<br>");
+			document.write((false || false)+"<br>");
+			document.write((!true)+"<br>");
+			document.write((!false)+"<br>");
+			
+			document.write("<br>字符串运算符：<br>");  //对字符串进行连接
+			document.write(("张三" + "男")+"<br>");
+			
+			document.write("<br>条件运算符：<br>");
+			var age =15;
+			var str2 = (age >18) ? "成年":"未成年";
+			document.write(str2);
+			document.write("<br>");
+			
+			//判断奇偶数
+			var number11 =16;
+			var str3 =(number11 % 2 == 0) ? "偶数":"奇数";
+			document.write(str3);
+			
+		</script>
+	</body>
+</html>

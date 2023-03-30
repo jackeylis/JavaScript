@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自定义函数-有参函数</title>
+	</head>
+	<body>
+		
+		<input type="button" name="btnShow" value="显示5次Hello World!" onclick="showfun(prompt('请输入你要循环输出的次数',''))"/>
+		<script type="text/javascript">
+			//单击某个按钮后在页面显示“Hello World!”，并且能够控制语句显示的次数
+			//有参函数
+			/* function show(count){
+				for (var i=0;i<count;i++){
+					document.write("Hello World!<br>")
+				}
+			} */
+			//匿名函数
+			var a = 0;
+			var showfun =function(count){
+				for (var i=0;i<count;i++){
+					document.write("Hello World!<br");
+				}
+			}
+		</script>
+	</body>
+</html>

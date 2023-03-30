@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>创建和增加节点</title>
+	</head>
+	<body>
+		<h2>喜欢的水果</h2>
+		<input id="btn1" type="button" value="增加一幅图片" onclick="addNode()"/><br />
+		<img id="p1" src="../img/fruit.jpg" alt="图1"/><br />
+		<input id="btn2" type="button" value="复制图片" onclick="copeNode()"/><br />
+		<img id="p2" src="../img/grape.jpg" alt="图2"/>
+		
+		<script type="text/javascript">
+			function addNode(){
+				var oldNode = document.getElementById("p1");  //获取插入节点的位置
+				var image = document.createElement("img");  //创建一个图片节点
+				image.setAttribute("src","../img/fruit.jpg");  //设置图片路径
+				document.body.insertBefore(image,oldNode);  //插入图片到p1的前面
+				//document.body.appendChild(image);
+			}
+			function copeNode(){
+				var image2 = document.getElementById("p2");  //获取复制的节点
+				var copeImage2 = image2.cloneNode(false);  //创建一节点
+				document.body.appendChild(copeImage2);
+			}
+		</script>
+	</body>
+</html>

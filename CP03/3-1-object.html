@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS对象</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//创建对象
+			var str = new String("早上好");
+			var now = new Date();
+			document.write(str +"<br>");
+			document.write(now +"<br>");
+			//创建自定义对象
+			//使用object关键字构造对象
+			/* var boy = new Object();  //使用new关键字构造一个对象
+			boy.name="张三";  //是对象添加属性
+			boy.height ="180cm";
+			boy.weight ="65kg";
+			boy.age=20;
+			boy.style ="cool";
+			boy.sing =cansing;
+			function cansing(){
+				document.write("能唱能跳");
+			}
+			document.write("这是我同桌："+boy.name+"，年龄" +boy.age+"，身高"+boy.height+"，体重"+"，他非常"+boy.style+"，他");
+			boy.sing();
+			document.write("<br>"); */
+			
+			//使用function关键字构造对象
+			function boy(name,height,weight,age){
+				this.name=name;
+				this.height=height;
+				this.weight=weight;
+				this.age=age;
+				this.sing = cansing;			
+			}
+			function cansing(){
+				document.write("能唱能跳");
+			}
+			var boy = new Boy("李明","178cm","65kg","20")
+			document.write("这是我同桌："+boy.name+"，年龄" +boy.age+"，身高"+boy.height+"，体重"+boy.weight+"，他");
+			boy.sing();
+			document.write("<br>");
+		</script>
+	</body>
+</html>

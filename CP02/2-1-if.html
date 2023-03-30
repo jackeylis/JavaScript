@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>控制语句if</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* var age = 11;
+			if (age>=18){
+				document.write("成年人");
+			} else{
+				document.write("未成年人");
+			}
+			document.write("<br>");
+			//多重if
+			//判断分数是否及格，显示分数等级：90以上优秀；80——90良好，60以上及格，如果分数不在0—100以内则提示分数超出范围
+			var score;
+			score = prompt("请输入成绩：");  //prompt（）方法用于显示可提示用户进行输入的对话框。
+			if (score >=90 && score=<100) {
+				document.write("成绩优秀");				
+			}
+			else if(score　>=80 && score<90){
+				document.write("成绩良好");
+			}
+			else if(score　>=60 && score<80){
+				document.write("成绩合格");
+			}
+			else if(score　>=0 && score<60){
+				document.write("成绩不合格");
+			}
+			else{
+				document.write("分数超出范围！");
+			} */
+			//嵌套if
+			/*
+			*问题：C#和HTML总成绩超过160分，才能有资格参加编程比赛
+			* 	（1）C#单科成绩大于等于90分的，可以参加C#比赛
+			* 	（2）html单科成绩大于等于95分的，可以参加html比赛
+			* 	（3）无法参加C#和HTML比赛的，但总成绩超过160分的，可以参加软件测试比赛
+			*/
+			var csharp =prompt("请输入C#成绩：");
+			var html =prompt("请输入HTML成绩：");
+			var sum = parseFloat(csharp) + parseFloat(html);
+			if (sum >= 160) {
+				if (csharp >=90 && html >=95){
+					document.write("获得C#比赛和html比赛的参赛资格");
+				}
+				else if(csharp >=90){
+					document.write("获得C#比赛的参赛资格");
+				}
+				else if(csharp >=95){
+					document.write("获得html比赛的参赛资格");
+				}
+				else{
+					document.write("可以参加软件测试比赛");
+				}
+			}
+			else{
+				document.write("未获得参赛资格，继续努力");
+			}
+			
+			//案例
+			/* var a = 10,b=8,c=4;
+			if(a>b){
+				else if(a>c){
+					alert("最大的数是a！");
+				}
+				else{
+					alert("最大的数是c！")
+				}
+			}
+			else{
+				if(b>c){
+					alert("最大的数是c!")
+				}
+				else{
+					alert("最大的数是b!");
+				}
+			} */
+		</script>
+	</body>
+</html>

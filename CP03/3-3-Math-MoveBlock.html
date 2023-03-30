@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>随机移动的 小方块</title>
+	</head>
+	<body>
+		<div id="box" style="width: 100px; height: 100px; background-color: hotpink; position: absolute; z-index: 1; top: 50px; left: 50px;" onclick="move()"></div>
+		<script type="text/javascript">
+			function move(){
+				var box1=document.getElementById("box");
+				var topnum = Math.random()*100;
+				var leftnum = Math.random()*100;
+				box1.style.top = topnum+"px";
+				box1.style.left = leftnum+"px";
+			}
+		</script>
+	</body>
+</html>

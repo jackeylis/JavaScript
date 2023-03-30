@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>String对象</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var str = "inlonvenjsn"
+			var len = str.length;  //返回字符串的长度
+			var at = str.charAt(1);  //返回参数num指定索引(从0开始)位置处的字符
+			var x =str.indexOf("e");  //返回参数string在字符串中首次出现的位置
+			var y = str.indexOf("n",2);
+			var lastnum = str.lastIndexOf("n");
+			document.write("字符串" +str+ "的长度是："+len +"<br>");
+			document.write("字符串" +str+ "位置1所在的字符是："+at+"<br>");
+			document.write("字符串" +str+ "中“e”首次出现的位置是："+x+"<br>");
+			document.write("字符串" +str+ "中从位置2开始检索，“n”首次出现的位置是："+y+"<br>");
+			document.write("字符串" +str+ "中“e”最后出现的位置是："+lastnum+"<br>");
+			
+			//字符串截取slice(),substr(),substring()
+			document.write("substr(0，5)截取字符串“"+str+"”：");
+			document.write(str.substring(0,5)+"<br>");   //从位置0（第一个字符）开始，取长度为5的字符串
+			document.write("substring(2,5)截取字符串“"+str+"”：");
+			document.write(str.substring(2,5)+"<br>");   //从位置2（第三个字符）开始，到位置5的字符串
+			document.write("slice(5-1)截取字符串“"+str+"”：");
+			document.write(str.slice(5,-1)+"<br>");     //从位置5（第六个字符）开始，到最后一个字符
+		</script>
+	</body>
+</html>

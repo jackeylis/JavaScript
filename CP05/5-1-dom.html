@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文档对象模型</title>
+	</head>
+	<body bgcolor="pink">
+		<h1 id="h11" style="color: white;">单击按钮，改变颜色</h1>
+		<form name="myform" id="myform">
+			<input  type="button" value="点击变颜色" onclick="changeColor()"/>
+		</form>
+		
+		<script type="text/javascript">
+			function changeColor(){
+				document.getElementById("h11").style.color="red";  //将标题颜色变为红色
+				document.getElementById("h11").innerText="颜色变了！";  //将标题文字变为"颜色变了！"
+				document.body.bgColor = "yellow";   //将网页背景变为黄色
+			}
+		</script>
+	</body>
+</html>
